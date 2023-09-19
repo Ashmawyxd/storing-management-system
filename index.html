@@ -1,0 +1,76 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="style_for_cruds_operation.css" rel="stylesheet" type="text/css">
+<title> ashmawy disigner</title>
+    <script src="angular.js"></script>
+</head>
+<body ng-app="" >
+<script src="jquery.js"></script>
+ <!--====================================== start =================================== -->
+    <div class="cruds" style="background-color:{{cl}};">
+        <div class="head">
+            <h1> CRUDS</h1>
+            <p>product management system </p>
+            
+        </div>
+        <div class="input">
+            <div class="them">
+        <button id="color">white</button>
+        <button id="black">blue</button>
+            </div>
+            <br>
+        <input type="color" ng-model="cl" class="color"/>
+               
+        <input type="text" placeholder="title" id="title"/>
+      
+            <div class="price">
+            <input type="number" placeholder="price" id="price" min="0"/>
+            <input type="number" placeholder="taxes" id="taxes"/>
+            <input type="number" placeholder="ads" id="ads"/>
+            <input type="number" placeholder="discount" id="discount"/>
+            <small id="total">null</small>
+            </div>
+           
+            <input type="number" placeholder="count" id="count"/>
+            <input type="text" placeholder="category" id="category"/>
+            <button id="submit">Create Product</button>
+        </div>
+        <div class="output">
+        <div class="searchBlock">
+            <input onkeyup="searchelemets(this.value)" type="text" placeholder="search" id="search"/>
+            <div class="btnsearch">
+            <button onclick="getsearcmode(this.id)" id="searchtitle"> search by title</button>
+            <button onclick="getsearcmode(this.id)" id="searchcategory"> search by category</button>
+            </div>
+            <div id="deleteall"></div>
+            <input id="txtsearch" placeholder="suber search"/>
+            <table id="new">  
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+              <center><h1 id="dis"></h1></center> 
+        </div>
+            
+        </div>
+    </div>
+    
+    
+    
+    
+ <!--================================================== end ============================================== -->
+<script src="programing_cruds_operation.js"></script>
+</body>
+</html>
